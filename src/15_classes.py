@@ -1,13 +1,16 @@
 # Make a class LatLon that can be passed parameters `lat` and `lon` to the
 # constructor
 
+
 class LatLon:
     def __init__(self, lat, lon):
         self.lat = lat
         self.lon = lon
 
-# Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
-# constructor. It should inherit from LatLon. Look up the `super` method.
+# Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon`
+# to the constructor. It should inherit from LatLon. Look up the `super`
+# method.
+
 
 class Waypoint(LatLon):
     def __init__(self, name, lat, lon):
@@ -28,9 +31,11 @@ class Geocache(Waypoint):
         self.size = size
 
     def __str__(self):
-        return f'"{self.name}", diff {self.difficulty}, size {self.size}, {self.lat}, {self.lon}'
+        return (f'"{self.name}", diff {self.difficulty}, size {self.size}' +
+                f', {self.lat}, {self.lon}')
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
+
 
 waypoint = Waypoint("Catacombs", 41.70505, -121.51521)
 
